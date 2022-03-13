@@ -1,0 +1,160 @@
+ 
+ 
+
+header {
+    background-image   : url(../images/bg.jpg);
+    background-size    : cover;
+    background-position: center;
+    height             : 100vh;
+    color              : #fff;
+}
+ 
+.navbar-dark .navbar-nav .nav-link {
+    color : #fff;
+    margin: 0px 10px;
+}
+.navbar{
+    background-color: black;
+    transition: all 1s;
+}
+
+.caption a {
+    text-decoration: none;
+    color          : crimson
+}
+.icon{
+
+    transition: all, 1s;
+}
+.icon:hover{
+font-size: 30px;
+color: red;
+
+}
+
+.brd {
+    width : 40px;
+    height: 60px;
+}
+
+.brd::after {
+    content         : "";
+    position        : absolute;
+    bottom          : 10px;
+    left            : 50%;
+    width           : 8px;
+    height          : 8px;
+    background-color: crimson;
+    transform       : translateX(-50%);
+    border-radius: 10px;
+    animation       : move 1s infinite;
+}
+
+@keyframes move {
+    0% {
+        bottom : 10px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom : 80%;
+        opacity: 1;
+    }
+}
+
+
+
+#about h2 ,#about2 h2  {
+    position: relative;
+}
+#about2 h2::after{
+    content       : "About";
+    position      : absolute;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    color         : #ccc;
+    z-index       : -1;
+    font-size     : 60px;
+    letter-spacing: 2;
+}
+ 
+
+#about h2::after,
+#service h2::after {
+    content       : "TESTIMONIALS";
+    position      : absolute;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    color         : #ccc;
+    z-index       : -1;
+    font-size     : 60px;
+    letter-spacing: 2;
+}
+
+#service h2 {
+    position: relative;
+}
+
+#service h2::after {
+    content: "SERVICES";
+}
+
+.about-item img {
+    width    : 10%;
+    transform: translateY(-50%);
+
+}
+
+.carousel-inner {
+    padding: 60px 0px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width           : 10px;
+    height          : 10px;
+    background-color: crimson;
+    border-radius   : 50%;
+}
+
+#service {
+    background-image     : url(../images/dark_dot.jpg);
+    background-attachment: fixed;
+    color                : #fff;
+}
+
+.service-item h4 {
+    position      : relative;
+    padding-bottom: 5px;
+}
+
+.service-item h4::after {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 50%;
+    transform       : translateX(-50%);
+    background-color: crimson;
+    width           : 15%;
+    height          : 1px;
+    transition      : width 1s;
+}
+
+.service-item i {
+    color     : #fff;
+    transition: color ,font-size 1s;
+}
+
+.service-item:hover i {
+    color: crimson;
+    font-size: 30px;
+}
+
+.service-item:hover h4::after {
+    width: 50%;
+}
